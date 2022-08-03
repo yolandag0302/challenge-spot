@@ -10,6 +10,15 @@
     
     mv .env.example .env
     
+    cd database/csv
+    
+    paste the csv file from https://sig.cdmx.gob.mx/datos/#d_datos_cat
+    corresponding to Gustavo A. Madero Alcaldia. 
+    
+    File name = sig_cdmx_GUSTAVO_A_MADERO_08_2020.csv
+    
+    cd ../..
+    
     composer install
 
 # Configuring a bash alias
@@ -18,7 +27,7 @@
 
 # Start the Docker containers
 
-    sail start
+    sail up -d
     
     sail artisan migrate
     
