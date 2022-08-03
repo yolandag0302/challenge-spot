@@ -1,8 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Catastro;
+use App\Http\Controllers\Api\CatastroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +14,7 @@ use App\Models\Catastro;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::apiResource('catastros', Catastro::class);
+Route::get('/price-m2/zip-codes/{zip_code}/aggregate/{aggregate}', [CatastroController::class, 'show'])
+    ->name('catastros.show')
+    ->whereNumber('zip_code')
+    ->whereIn('aggregate', ['max', 'min', 'avg']);
