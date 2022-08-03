@@ -3,5 +3,3 @@
 # de la Ciudad de México.
 
 GET http://localhost/api/price-m2/zip-codes/7010/aggregate/max?construction_type=1
-
-
