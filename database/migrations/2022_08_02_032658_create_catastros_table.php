@@ -17,12 +17,12 @@ return new class extends Migration
             $table->id();
             $table->integer('codigo_postal');
             $table->string('uso_construccion');
-            $table->float('superficie_terreno');
-            $table->float('superficie_construccion');
-            $table->float('valor_suelo');
-            $table->float('subsidio');
-            $table->float('price_unit');
-            $table->float('price_unit_construction');
+            $table->decimal('superficie_terreno', 18, 2);
+            $table->decimal('superficie_construccion', 18, 2);
+            $table->decimal('valor_suelo', 18, 2);
+            $table->decimal('subsidio', 18, 2);
+            $table->decimal('price_unit', 18, 2);
+            $table->decimal('price_unit_construction', 18, 2);
             $table->timestamps();
         });
     }
