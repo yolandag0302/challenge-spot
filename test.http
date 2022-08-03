@@ -1,0 +1,7 @@
+# Obtener el precio agregado (promedio, mínimo y máximo)
+# por m2 un código postal de la alcaldía Gustavo A. Madero utilizando datos del Gobierno
+# de la Ciudad de México.
+
+GET http://localhost/api/price-m2/zip-codes/7010/aggregate/max?construction_type=1
+
+
