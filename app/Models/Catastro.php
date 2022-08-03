@@ -19,4 +19,17 @@ class Catastro extends Model
         'price_unit',
         'price_unit_construction',
     ];
+
+    public function getUsoConstruccion(int $constructionType): string
+    {
+        return match (true) {
+            1 === $constructionType => 'Areas verdes',
+            2 === $constructionType => 'Centro de barrio',
+            3 === $constructionType => 'Equipamiento',
+            4 === $constructionType => 'Habitacional',
+            5 === $constructionType => 'Habitacional y comercial',
+            6 === $constructionType => 'Industrial',
+            default => 'Sin Zonificación'
+        };
+    }
 }
