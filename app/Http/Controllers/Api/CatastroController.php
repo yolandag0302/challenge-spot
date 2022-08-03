@@ -38,7 +38,7 @@ class CatastroController extends Controller
             4 === $constructionType => 'Habitacional',
             5 === $constructionType => 'Habitacional y comercial',
             6 === $constructionType => 'Industrial',
-            default => 'Sin Zonificación',
+            default => 'Sin Zonificación'
         };
     }
 }
